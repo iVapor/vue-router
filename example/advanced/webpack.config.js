@@ -19,5 +19,9 @@ module.exports = {
       }
     ]
   },
-  devtool: 'source-map'
+  devtool: 'source-map',
+  devServer: {
+    host: 'localhost', // can be overwritten by process.env.HOST
+    port: 5000
+  }
 }

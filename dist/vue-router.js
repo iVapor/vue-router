@@ -1,6 +1,6 @@
 /*!
  * vue-router v0.7.13
- * (c) 2016 Evan You
+ * (c) 2020 Evan You
  * Released under the MIT License.
  */
 (function (global, factory) {
@@ -387,11 +387,11 @@
       var charSpec = this.charSpec,
           debug = "[",
           chars = charSpec.validChars || charSpec.invalidChars;
-       if (charSpec.invalidChars) { debug += "^"; }
+        if (charSpec.invalidChars) { debug += "^"; }
       debug += chars;
       debug += "]";
-       if (charSpec.repeat) { debug += "+"; }
-       return debug;
+        if (charSpec.repeat) { debug += "+"; }
+        return debug;
     }
     END IF **/
   };
@@ -902,7 +902,7 @@
       this.listener = function (e) {
         var url = location.pathname + location.search;
         if (_this.root) {
-          url = url.replace(_this.rootRE, '');
+          url = url.replace(_this.rootRE, '') || '/';
         }
         _this.onChange(url, e && e.state, location.hash);
       };
